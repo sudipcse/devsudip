@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 // Import router directives
-import { ROUTER_DIRECTIVES } from '@angular/router';
+// Deprecated
+// import { ROUTER_DIRECTIVES } from '@angular/router';
 
 
 @Component({
@@ -30,8 +31,9 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
       <router-outlet></router-outlet>
     </div>
   `,
+  // Deprecated
   // Tell component to use router directives
-  directives: [ROUTER_DIRECTIVES]
+  // directives: [ROUTER_DIRECTIVES]
 })
 
 // App Component class

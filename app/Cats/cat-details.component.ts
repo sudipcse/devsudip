@@ -2,7 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PetService } from '../pet.service'
 import { Observable } from 'rxjs/Observable';
-import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   template: `
@@ -14,9 +14,7 @@ import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
         <p><strong>Description: </strong>{{cat.description.$t}}</p>
     </div>
     `,
-    // Providers
-    providers: [PetService],
-    directives: [ROUTER_DIRECTIVES]
+    
 })
 // Component class implementing OnInit
 export class CatDetailsComponent implements OnInit {

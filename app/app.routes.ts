@@ -1,20 +1,26 @@
 // Imports
-import { provideRouter, RouterConfig } from '@angular/router';
+// Deprecated import
+// import { provideRouter, RouterConfig } from '@angular/router';
+import { ModuleWithProviders }  from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 
-import { DogRoutes }    from './dogs/dog.routes';
-import { CatRoutes }    from './cats/cat.routes';
+import { dogRoutes }    from './dogs/dog.routes';
+import { catRoutes }    from './cats/cat.routes';
 
 // Route Configuration
-export const routes: RouterConfig = [
+export const routes: Routes = [
   {
     path: '',
     redirectTo: '/dogs',
     pathMatch: 'full'
   },
-  ...CatRoutes,
-  ...DogRoutes
+  ...catRoutes,
+  ...dogRoutes
 ];
 
-export const APP_ROUTER_PROVIDERS = [
-  provideRouter(routes)
-];
+// Deprecated provide
+// export const APP_ROUTER_PROVIDERS = [
+//   provideRouter(routes)
+// ];
+
+export const routing: ModuleWithProviders = RouterModule.forRoot(routes);

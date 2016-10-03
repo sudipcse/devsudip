@@ -2,7 +2,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PetService } from '../pet.service'
 import { Observable } from 'rxjs/Observable';
-import { ROUTER_DIRECTIVES } from '@angular/router';
 import { Pet } from '../pet';
 
 @Component({
@@ -17,10 +16,7 @@ import { Pet } from '../pet';
         </span>
       </li>
     </ul>
-    `,
-    // Providers
-    providers: [PetService],
-    directives: [ROUTER_DIRECTIVES]
+    `
 })
 // Component class implementing OnInit
 export class DogListComponent implements OnInit {

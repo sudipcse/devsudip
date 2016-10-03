@@ -2,6 +2,8 @@
 import { Injectable }    from '@angular/core';
 import { Jsonp, URLSearchParams } from '@angular/http';
 import { Pet } from './pet'
+import 'rxjs/add/operator/map';
+
 
 // Decorator to tell Angular that this class can be injected as a service to another class
 @Injectable()

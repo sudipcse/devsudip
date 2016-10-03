@@ -1,13 +1,4 @@
-import { bootstrap }    from '@angular/platform-browser-dynamic';
-// Import App Component to be bootstrapped
-import { AppComponent } from './app.component';
-// Import configured routes
-import { APP_ROUTER_PROVIDERS } from './app.routes';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { AppModule } from './app.module';
 
-import { JSONP_PROVIDERS } from '@angular/http';
-
-// Bootstrap app with configured routes
-bootstrap(AppComponent, [
-  APP_ROUTER_PROVIDERS, JSONP_PROVIDERS
-])
-.catch(err => console.error(err));
+platformBrowserDynamic().bootstrapModule(AppModule);
